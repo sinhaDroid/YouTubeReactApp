@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -42,7 +44,8 @@ app.route('/api/v1/videos')
 // convert API to communicate with Filestack
 app.route('/convert')
   .post((req, res) => {
-    const { status, uuid, data: { url } } = req.body;
+    const xyz = { status, uuid, data: { url } };
+    xyz = req.body;
     // Once the transcoding is completed then show the video
     if (status && status === 'completed') { // status should be 'completed'
       db.forEach(video => {
