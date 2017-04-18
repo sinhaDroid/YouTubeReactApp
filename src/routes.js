@@ -6,7 +6,7 @@ import {
 	hashHistory,
 } from 'react-router';
 import Layout from 'components';
-// import { Home, Add } from 'containers';
+import { Home, Add } from 'containers';
 
 // App routes
 const Routes = (
